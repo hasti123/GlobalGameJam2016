@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class InteractiveObjectController : MonoBehaviour {
+public class InteractiveObjectController : MonoBehaviour
+{
+    public string transitionLevel;
 
 	private bool _characterInRange;
 	private int _keyPressDuration;
@@ -41,7 +44,8 @@ public class InteractiveObjectController : MonoBehaviour {
 					_eggFried = true;
 					Debug.Log ("Egg made");
 					_keyPressDuration = 0;
-				}
+                    SceneManager.LoadScene(transitionLevel);
+                }
 			} else {
 				DecreaseWalterDuration ();
 			}
