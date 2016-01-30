@@ -2,3 +2,8 @@ RichUall/Temp/
 RichUall/Temp/*
 RichUall/Temp/**
 RichUall/Library/metadata/*
+RichUall/Library/ShaderCache.db
+RichUall/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+RichUall/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+RichUall/Library/assetDatabase3
+RichUall/Assets/Scripts/Dishes/ScoreController.cs.meta
