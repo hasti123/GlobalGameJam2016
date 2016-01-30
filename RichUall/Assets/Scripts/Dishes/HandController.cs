@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HandController : MonoBehaviour {
 	public float HandSpeed;
+	private int _dishesCaught;
 	// Use this for initialization
 	void Start () {
 	
@@ -21,5 +22,10 @@ public class HandController : MonoBehaviour {
 		}
 
 		GetComponent<Rigidbody2D>().position = new Vector2(x, GetComponent<Rigidbody2D>().position.y);
+	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		Destroy (other.gameObject);
+		_dishesCaught += 1;
 	}
 }
