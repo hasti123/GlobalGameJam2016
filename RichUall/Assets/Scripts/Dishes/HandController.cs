@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HandController : MonoBehaviour {
 	public float HandSpeed;
-	private int _dishesCaught;
+	public int PlayerScore;
+	private ScoreController _scoreText; 
 	// Use this for initialization
 	void Start () {
-	
+		GameObject g = GameObject.Find("Score");
+		_scoreText = g.GetComponent<ScoreController> ();
 	}
 	
 	// Update is called once per frame
@@ -26,6 +29,7 @@ public class HandController : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		Destroy (other.gameObject);
-		_dishesCaught += 1;
+		PlayerScore++;
+		_scoreText.SetScore (PlayerScore);
 	}
 }
