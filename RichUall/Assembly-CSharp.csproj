@@ -45,13 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\DestroyOther.cs" />
+     <Compile Include="Assets\Scripts\Dishes\DestroyOther.cs" />
      <Compile Include="Assets\Scripts\Dishes\DishController.cs" />
      <Compile Include="Assets\Scripts\Dishes\HandController.cs" />
      <Compile Include="Assets\Scripts\Dishes\ScoreController.cs" />
-     <Compile Include="Assets\Scripts\InteractiveObjectController.cs" />
-     <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Dishes\Spawner.cs" />
+     <Compile Include="Assets\Scripts\Level 1\InteractiveObjectController.cs" />
+     <Compile Include="Assets\Scripts\Level 1\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
