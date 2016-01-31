@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Dishes.unity
+- path: Assets/Scenes/Bedroom.unity
   isLoaded: 1
   isActive: 1

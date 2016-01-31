@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HandController : MonoBehaviour {
 	public float HandSpeed;
 	public int PlayerScore;
-	private ScoreController _scoreText; 
+    public int winningScore;
+    public string sceneToLoad;
+    private ScoreController _scoreText;
+    
 	// Use this for initialization
 	void Start () {
 		GameObject g = GameObject.Find("Score");
@@ -31,5 +35,10 @@ public class HandController : MonoBehaviour {
 		Destroy (other.gameObject);
 		PlayerScore++;
 		_scoreText.SetScore (PlayerScore);
+
+	    if (PlayerScore >= winningScore)
+	    {
+	        SceneManager.LoadScene(sceneToLoad);
+	    }
 	}
 }

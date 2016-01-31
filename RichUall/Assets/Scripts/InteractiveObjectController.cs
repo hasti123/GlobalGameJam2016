@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class InteractiveObjectController : MonoBehaviour
 {
     public string transitionLevel;
+    public int transitionTimer;
 
 	private bool _characterInRange;
 	private int _keyPressDuration;
@@ -40,7 +41,7 @@ public class InteractiveObjectController : MonoBehaviour
 			if (Input.GetKey (KeyCode.E)) {
 				_keyPressDuration += 1;
 				Debug.Log (_keyPressDuration);
-				if (_keyPressDuration == 500) {
+				if (_keyPressDuration == transitionTimer) {
 					_eggFried = true;
 					Debug.Log ("Egg made");
 					_keyPressDuration = 0;
