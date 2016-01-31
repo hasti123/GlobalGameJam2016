@@ -62,17 +62,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ClockController.cs" />
     <Compile Include="Assets\Scripts\DestroyOther.cs" />
     <Compile Include="Assets\Scripts\Dishes\DishController.cs" />
     <Compile Include="Assets\Scripts\Dishes\HandController.cs" />
     <Compile Include="Assets\Scripts\Dishes\ScoreController.cs" />
     <Compile Include="Assets\Scripts\InteractiveObjectController.cs" />
+    <Compile Include="Assets\Scripts\Level1InitScript.cs" />
     <Compile Include="Assets\Scripts\MakeBed\MakeBedController.cs" />
     <Compile Include="Assets\Scripts\MenuController.cs" />
+    <Compile Include="Assets\Scripts\PersistentDataScript.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\PoopGame\ScopperController.cs" />
+    <Compile Include="Assets\Scripts\PoopGame\PoopCounter.cs" />
+    <Compile Include="Assets\Scripts\PoopGame\PoopSpawner.cs" />
+    <Compile Include="Assets\Scripts\PoopGame\ScooperController.cs" />
     <Compile Include="Assets\Scripts\PoopGame\SnuggleController.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\StinkRemover.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Art\FinalAnimations\Animations\README.txt" />

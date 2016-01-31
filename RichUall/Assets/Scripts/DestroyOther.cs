@@ -17,4 +17,9 @@ public class DestroyOther : MonoBehaviour {
     {
         Destroy(other.gameObject);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(other.gameObject);
+    }
 }

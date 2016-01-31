@@ -7,14 +7,17 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
 
     private Animator animator;
-    private bool facingRight;
 
 	// Use this for initialization
 	void Start ()
 	{
 	    animator = GetComponent<Animator>();
-	    facingRight = false;
-	}
+        var persistentDataFinder = GameObject.Find("PersistentData");
+        var persistentData = persistentDataFinder.GetComponent<PersistentDataScript>();
+
+        //Consider the pillow fluffed
+        transform.position = new Vector2(persistentData.RichX, persistentData.RichY);
+    }
 	
 	// Update is called once per frame
 	void Update () {

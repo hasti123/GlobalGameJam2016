@@ -38,7 +38,13 @@ public class HandController : MonoBehaviour {
 
 	    if (PlayerScore >= winningScore)
 	    {
-	        SceneManager.LoadScene(sceneToLoad);
+            var persistentDataFinder = GameObject.Find("PersistentData");
+            var persistentData = persistentDataFinder.GetComponent<PersistentDataScript>();
+
+            //Consider the dishes cleaned
+            persistentData.AreDishesDone = true;
+
+            SceneManager.LoadScene(sceneToLoad);
 	    }
 	}
 }

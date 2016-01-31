@@ -6,6 +6,7 @@ public class InteractiveObjectController : MonoBehaviour
 {
     public string transitionLevel;
     public int transitionTimer;
+    public GameObject rich;
 
 	private bool _characterInRange;
 	private int _keyPressDuration;
@@ -45,6 +46,14 @@ public class InteractiveObjectController : MonoBehaviour
 					_eggFried = true;
 					Debug.Log ("Egg made");
 					_keyPressDuration = 0;
+
+                    var persistentDataFinder = GameObject.Find("PersistentData");
+                    var persistentData = persistentDataFinder.GetComponent<PersistentDataScript>();
+
+                    //Consider the pillow fluffed
+                    persistentData.RichX = rich.transform.position.x;
+				    persistentData.RichY = rich.transform.position.y;
+
                     SceneManager.LoadScene(transitionLevel);
                 }
 			} else {

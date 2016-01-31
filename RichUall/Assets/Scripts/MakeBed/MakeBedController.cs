@@ -20,7 +20,13 @@ public class MakeBedController : MonoBehaviour
 
 	    if (_fluffs >= winningFluffs)
 	    {
-	        SceneManager.LoadScene("Bedroom");
+            var persistentDataFinder = GameObject.Find("PersistentData");
+            var persistentData = persistentDataFinder.GetComponent<PersistentDataScript>();
+
+            //Consider the pillow fluffed
+            persistentData.IsBedDone = true;
+
+            SceneManager.LoadScene("Bedroom");
 	    }
 	}
 }
