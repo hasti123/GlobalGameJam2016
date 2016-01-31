@@ -39,7 +39,7 @@ public class InteractiveObjectController : MonoBehaviour
 
 	void UpdateEggFryer(){
 		if (_characterInRange && !_eggFried) {
-			if (Input.GetKey (KeyCode.E)) {
+			if (Input.anyKey) {
 				_keyPressDuration += 1;
 				Debug.Log (_keyPressDuration);
 				if (_keyPressDuration == transitionTimer) {

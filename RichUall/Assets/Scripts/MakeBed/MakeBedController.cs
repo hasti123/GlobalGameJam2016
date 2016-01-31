@@ -13,7 +13,7 @@ public class MakeBedController : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Input.GetKeyDown(KeyCode.E))
+	    if (Input.anyKeyDown)
 	    {
 	        _fluffs++;
 	    }
