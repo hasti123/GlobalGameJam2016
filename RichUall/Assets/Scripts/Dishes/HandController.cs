@@ -31,7 +31,7 @@ public class HandController : MonoBehaviour {
 		GetComponent<Rigidbody2D>().position = new Vector2(x, GetComponent<Rigidbody2D>().position.y);
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
+	void OnCollisionEnter2D(Collision2D other) {
 		Destroy (other.gameObject);
 		PlayerScore++;
 		_scoreText.SetScore (PlayerScore);
